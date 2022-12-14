@@ -1,0 +1,86 @@
+/*****************TAGS**********
+Karriere
+Preise**********/
+
+body {
+    margin-left: 0;
+    background-color: lightblue;
+}
+
+hr {
+    border-top: 1px solid black;
+}
+
+img {
+    filter: drop-shadow(0 0 10px #000000);
+}
+
+li {
+    margin: 40px;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+}
+
+/*****************CLASSES*****************/
+.advertise-font {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 70px;
+    font-size: 50px;
+    color: #0275d8;
+    text-align: center;
+    font-style: italic;
+}
+
+.box-shadow:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 1px;
+    z-index: -1;
+    transform: scale(.9);
+    box-shadow: 0px 0px 8px 2px #000000;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.form-style {
+    width: 150px;
+
+}
+
+.img-margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.input_inline {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.input_label_inline{
+    display: inline-block;
+}
+/*****************IDs*********************/
+
+#box {
+    background-color: #3D6AA2;
+    width: 160px;
+    height: 90px;
+    position: absolute;
+    top: calc(10% - 10px);
+    left: calc(50% - 80px);
+}

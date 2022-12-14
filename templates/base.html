@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    </style>
+</head>
+<body>
+
+<!---------------------------NAVBAR-------------------------------->
+<div class="container-fluid" style="padding: 0">
+    <div style="background-color: #DEF5E5">
+        <h6 style="text-align: right">
+            <span style="float: left; margin-left: 10px; margin-top: 5px"><a href="/"><img
+                    src="../static/images/home-918.png" alt="" width="30px"></a></span>
+            <button type="button" class="btn btn-default btn-outline-primary" style="margin-right: 20px">
+                <a href="about">About</a>
+            </button>
+            <button type="button" class="btn btn-default btn-outline-primary" style="margin-right: 20px">
+                <a href="calc_risk">Risk Calculator</a>
+            </button>
+            <button type="button" class="btn btn-default btn-outline-primary" style="margin-right: 20px">
+                <a href="banking">Banking</a>
+            </button>
+        </h6>
+    </div>
+</div>
+<!---------------------------NAVBAR-------------------------------->
+{% block body %}
+
+{% endblock %}
+</body>
+</html>
