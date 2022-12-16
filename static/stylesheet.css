@@ -11,9 +11,9 @@ hr {
     border-top: 1px solid black;
 }
 
-/*img {*/
-/*    filter: drop-shadow(0 0 10px #000000);*/
-/*}*/
+img {
+    filter: drop-shadow(0 0 10px #000000);
+}
 
 li {
     margin: 40px;
