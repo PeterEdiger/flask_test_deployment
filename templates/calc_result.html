@@ -1,0 +1,46 @@
+{% extends "calc_risk.html" %}
+
+    {% if total_invest  %}
+        {% block gesamt_invest %} <i>Gesamt Investition:
+            <span style="color:#810CA8 ">{{ total_invest }}$</span></i><br>
+        <i>Stückzahl:
+            <span style="color:#810CA8 ">{{ quantity }}</span></i>
+        {% endblock %}
+    {% endif %}
+    {#--------------------- Losses Results --------------------------#}
+    {% block losses %}
+        {% if s_t_l_d %}
+        <p><i>Stop-Loss bei:   <span style="color: #990000">{{ s_t_l_d }}$</span></i></p>
+        <p><i>Verlust pro Aktie: <span style="color: #990000">{{ loss_per_stock }}$</span>  oder
+            <span style="color: #990000">{{ loss_prct }}%</span> </i></p>
+            <p><i>Gesamt Verlust: <span style="color: #990000">{{ total_loss }}$</span></i></p>
+        {% endif %}
+    {% endblock %}
+
+    {#--------------------- Wins Results --------------------------#}
+    {% block winnings %}
+        {% if s_t_w_d %}
+        <p><i>Take-Profit bei:   <span style="color: #3D8361">{{ s_t_w_d }} $</span></i></p>
+        <p><i>Gewinn pro Aktie: <span style="color: #3D8361">{{ win_per_stock }} $</span>  oder
+            <span style="color: #3D8361">{{ win_prct }}%</span> </i></p>
+            <p><i>Gesamt Gewinn: <span style="color: #3D8361">{{ total_win }} $</span></i></p>
+        {% endif %}
+    {% endblock %}
+
+    {#--------------------- CRV max. Verlust Results --------------------------#}
+    {% block crv %}
+        {% if crv %}
+        <p><i>Das CRV liegt bei</i> {{ crv }}</p>
+        {% endif %}
+    {% endblock %}
+
+    {% if tolerated_loss %}
+        <p>Stückzahl der Aktien {{ quantity }}</p>
+    {% endif %}
+
+    {#--------------------- User Warning --------------------------#}
+    {% block user_warning %}
+    <p>{{ user_warning }}</p>
+    {% endblock %}
+
+

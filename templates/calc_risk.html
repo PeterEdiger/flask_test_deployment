@@ -1,0 +1,92 @@
+{% include "base.html" %}
+
+
+{#--------------------- Forms Quantity Price --------------------------#}
+<div style="margin-left: 10px">
+<form action="/calc_result" method="get" style="padding-top: 50px">
+    <div class="input_inline">
+        <label><h5>Stückzahl: </h5></label>
+        <p><label>
+            <input type="number" name="quantity" class="form-style">
+        </label></p>
+    </div>
+
+    <div class="input_inline">
+        <label><h5>Aktueller Kurs</h5></label>
+        <p><label>
+            <input type="number" name="kurs" class="form-style">
+        </label></p>
+    </div>
+    {#--------------------- Result --------------------------#}
+    <div class="input_inline">{% block gesamt_invest %}{% endblock %}
+    </div>
+    <hr>
+
+    {#--------------------- Forms CRV max. Verlust --------------------------#}
+    <div class="input_inline">
+        <h5>CRV</h5>
+        <p><label>
+            <input type="text" name="crv" class="form-style">
+        </label></p>
+    </div>
+    <div class="input_inline">
+        <label><h5>Tolerierter max. <br> Verlust</h5></label>
+        <p><label>
+            <input type="number" name="tolerated_loss" class="form-style">
+        </label></p>
+    </div>
+    {#--------------------- Result --------------------------#}
+    <div class="input_inline">{% block crv %}{% endblock %}</div>
+    <hr>
+
+    {#--------------------- Forms Losses --------------------------#}
+
+    <div class="input_inline">
+        <h5>Stop-Loss % </h5>
+        <p><label class="input_label_inline">
+            <input type="number" style="color: #990000" name="loss_prct" class="form-style"
+                   value=  {% block form %} {% endblock %}>
+        </label></p>
+
+    </div>
+
+    <div class="input_inline">
+        <h5>Abverkauf beim <br> Preis von $</h5>
+        <p><label>
+            <input type="number" style="color:#990000;" name="selling_threshold_loss_dollar" class="form-style">
+        </label></p>
+    </div>
+    {#--------------------- Result --------------------------#}
+    <div class="input_inline">{% block losses %}{% endblock %}</div>
+    <hr>
+
+    {#--------------------- Forms Wins --------------------------#}
+    <div class="input_inline">
+        <h5>Take-Profit % </h5>
+        <p><label>
+            <input type="number" style="color: green" name="win_prct" class="form-style">
+        </label></p>
+    </div>
+
+    <div class="input_inline">
+        <h5>Take-Profit beim <br> Kurs von $</h5>
+        <p><label>
+            <input type="number" style="color: green" name="selling_threshold_win_dollar" class="form-style">
+        </label></p>
+    </div>
+    {#--------------------- Result --------------------------#}
+    <div class="input_inline">
+        {% block winnings %}{% endblock %}
+    </div>
+    <hr>
+
+    {#--------------------- Submit --------------------------#}
+    <div>
+        <p><input type="submit" value="Submit" class="form-style"></p>
+    </div>
+
+    {% block result %}{% endblock %}
+</form>
+</div>
+    {% block user_warning %}
+    {% endblock %}
