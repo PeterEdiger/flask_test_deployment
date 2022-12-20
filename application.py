@@ -34,8 +34,6 @@ def calc_result():
         return render_template("calc_result.html", user_warning="Bitte Kurs eingeben")
     else:
         kurs_int = int(kurs_str)
-    # --------------------------------------------------------------------------------#
-    total_invest = kurs_int * quantity
     # -------------------------------Loss Fälle einlesen-------------------------------#
     selling_threshold_loss_dollar_str = request.args.get("selling_threshold_loss_dollar")
     loss_prct_str = request.args.get("loss_prct")
@@ -80,6 +78,8 @@ def calc_result():
     if tolerated_loss_str:
         tolerated_loss_int = int(tolerated_loss_str)
         quantity = tolerated_loss_int / (kurs_int - s_t_l_d_i)
+    # --------------------------------------------------------------------------------#
+    total_invest = kurs_int * quantity
 
     # nur Take-Profit $
     if s_t_w_d_s:
@@ -141,3 +141,5 @@ def calc_result():
 
 if __name__ == '__main__':
     application.run()
+
+# todo bug bei errechneter Stückzahl über max Verlust stimmt die gesamt Invest nicht.
