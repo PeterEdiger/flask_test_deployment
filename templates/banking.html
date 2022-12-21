@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h2 style="text-align: center; margin: 50px 0 50px 0; color: #0275d8; font-family: 'Oswald', sans-serif">Schritt für
+        Schritt Anleitung zur Bedienung der Software</h2>
+    <hr>
+    <ol>
+        <li>Laden Sie sich den Code von GitHub runter <br> <a href="https://github.com/peetSoft/Bank_Transactions"><img
+                src="../static/images/git_hub_64px.png" alt="" class="center img-margin"></a></li>
+        <hr>
+        <li>Installieren Sie die requirements.txt Abhängigkeiten
+            <img src="../static/images/requirements.png" alt="" class="center img-margin">
+        </li>
+        <hr>
+        <li>Exportieren Sie eine CSV von ihrem Online-Banking
+            <img src="../static/images/sparkasse_export_rectangle.png" alt="" class="center img-margin"></li>
+        <hr>
+        <li>
+            Definieren Sie die _columns.csv Datei.
+            <span style="display: inline"><h5>Sollte der Spalten-Name ihrer Bank nicht dabei sein,
+            fügen Sie diesen hinzu. Mehr Infos in der <a
+                        href="https://github.com/peetSoft/Bank_Transactions/blob/peter_category_version/README.md">
+                    Github README
+                </a></h5></span>
+            <img src="../static/images/columns_csv.png" alt=""
+                 class="center img-margin">
+        </li>
+        <hr>
+        <li>
+            Definieren Sie Ihre Kategorien in der _categories.csv Datei.
+            <span style="display: inline"><h5>Vermeiden sie zu kurze und nicht eindeutige Schlüsselwörter.</h5></span>
+            <img src="../static/images/categories_2.png" alt=""
+                 class="center img-margin">
+
+        </li>
+        <hr>
+        <li>
+            Sie haben drei Skripte zur Verfügung.
+            <span style="display: inline"><h5>Jedes Skript verfügt über eine eigene Funktion</h5></span>
+
+            <img src="../static/images/scripts.png" alt=""
+                 class="center img-margin">
+
+        </li>
+        <hr>
+        <li>
+            Beispiel der Ordnerstruktur.
+            <span style="display: inline"><h5>Diese vordefinierte Ordnerstruktur dient als Beispiel und mögliche Vorlage.<br>
+            Die roten Dateien sind die Outputs die Sie erhalten.
+            </h5></span>
+
+            <img src="../static/images/directory_structure.png" alt=""
+                 class="center img-margin">
+
+        </li>
+        <hr>
+        <li>
+            Current Working Directory. (CWD)
+            <span style="display: inline"><h5>Definieren Sie für jedes Skript eine CWD<br>
+             Die Input Dateien müssen in die CDW gelegt werden.</h5></span>
+
+        </li>
+        <hr>
+        <li>
+            Beispiel der CWD Einstellung in Pycharm für categorizing_script.py
+            <span style="display: inline"><h5>Klicken Sie auf Edit Configurations von dem Skript.<br>
+                </h5></span>
+            <img src="../static/images/cwd_config_rectangle.png" alt=""
+                 class="center img-margin">
+            <span style="display: inline"><h5>Stellen Sie hier ihre Working Directory ein. <br>
+                </h5></span>
+            <img src="../static/images/cwd_config1_rectangle.png" alt=""
+                 class="center img-margin">
+
+        </li>
+        <hr>
+
+        <li>
+            Beispielbilder Output
+            <img src="../static/images/beispiel_1.png" alt=""
+                 class="center img-margin">
+            <img src="../static/images/beispiel_2.png" alt="" style="margin-top: 70px"
+                 class="center">
+        </li>
+        <hr>
+        <li>
+            Kontakt: go_and_code@web.de
+            <span style="display: inline"><h5>Sollten sie Fragen oder Anregungen zu dieser <br>
+             Software haben kontaktieren sie uns bitte per e-mail.</h5></span>
+
+    </ol>
+{% endblock %}
+
