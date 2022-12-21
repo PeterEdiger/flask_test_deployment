@@ -8,6 +8,11 @@ def home():
     return render_template("home.html")
 
 
+@application.route('/banking', methods=["POST", "GET"])
+def banking():
+    return render_template("banking.html")
+
+
 @application.route('/calc_risk')
 def risk_calc():
     return render_template("calc_risk.html")
