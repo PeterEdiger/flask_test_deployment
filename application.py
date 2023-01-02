@@ -109,7 +109,7 @@ def calc_result():
 
     if s_t_l_d_i:
         loss_per_stock = kurs_int - s_t_l_d_i
-        total_loss = quantity * loss_per_stock
+        total_loss = round(quantity * loss_per_stock)
 
     if s_t_w_d_i:
         win_per_stock = s_t_w_d_i - kurs_int
