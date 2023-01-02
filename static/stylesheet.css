@@ -1,7 +1,10 @@
-/*****************TAGS**********
-Karriere
-Preise**********/
+/*****************FONTS**********/
+@font-face {
+    font-family: "Oswald";
+    src: url("/static/fonts/oswald-v49-latin-regular.woff2")
+}
 
+/*****************TAGS**********/
 body {
     margin-left: 0;
     background-color: lightblue;
@@ -18,7 +21,7 @@ img {
 li {
     margin: 40px;
     font-size: 30px;
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald, sans-serif;
     font-style: italic;
 }
 
