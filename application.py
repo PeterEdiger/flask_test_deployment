@@ -69,7 +69,7 @@ def calc_result():
     # nur Stop-Loss $
     if s_t_l_d_s:
         s_t_l_d_i = int(s_t_l_d_s)
-        loss_prct_int = round((kurs_int - s_t_l_d_i) / kurs_int * 100, 2)
+        loss_prct_int = round((kurs_int - s_t_l_d_i) / kurs_int * 100)
 
     # nur Stop-Loss %
     if loss_prct_str:
@@ -82,7 +82,7 @@ def calc_result():
 
     if tolerated_loss_str:
         tolerated_loss_int = int(tolerated_loss_str)
-        quantity = round(tolerated_loss_int / (kurs_int - s_t_l_d_i))
+        quantity = round(tolerated_loss_int / (kurs_int - s_t_l_d_i), 2)
     # --------------------------------------------------------------------------------#
     total_invest = kurs_int * quantity
 
