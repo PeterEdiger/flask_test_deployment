@@ -82,7 +82,7 @@ def calc_result():
 
     if tolerated_loss_str:
         tolerated_loss_int = int(tolerated_loss_str)
-        quantity = tolerated_loss_int / (kurs_int - s_t_l_d_i)
+        quantity = round(tolerated_loss_int / (kurs_int - s_t_l_d_i))
     # --------------------------------------------------------------------------------#
     total_invest = kurs_int * quantity
 
