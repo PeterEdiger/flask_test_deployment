@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h2 style="text-align: center; margin: 50px 0 50px 0; color: #0275d8; font-family: 'Oswald', sans-serif">Anleitung
+        und Beispiele für den Risk Calculator</h2>
+    <hr>
+    <ul>
+        <li> Beispiel 1:
+           <h5>Sie haben einen tolerierten maximalen Verlust und haben einen Ziel Stop-Loss?<br>
+           Lassen Sie sich die zu kaufende Stückzahl berechnen.</h5>
+            <div style="margin-top: 50px">
+            <h5 style="text-align: center">Eingabe:</h5>
+            <img src="../static/images/example_risk_calc.png" alt="" class="center img-margin">
+            </div>
+            <div style="margin-top: 50px">
+            <h5 style="text-align: center">Ausgabe:</h5>
+            <img src="../static/images/risk_calc_example1.png" alt="" class="center img-margin">
+            </div>
+
+        </li>
+        </ul>
+        <hr>
+        <ul>
+        <li>
+            Beispiel 2:
+            <h5>Sie haben einen festen CRV mit dem Sie arbeiten? <br>
+            Lassen sie sich den fehlenden Wert zur Ober- oder zur Unterseite berechnen.</h5>
+            <div style="margin-top: 50px">
+            <h5 style="text-align: center">Eingabe:</h5>
+            <img src="../static/images/risk_calc_crv_example.png" alt="" class="center img-margin" >
+            </div>
+            <div style="margin-top: 50px">
+            <h5 style="text-align: center">Ausgabe:</h5>
+            <img src="../static/images/risk_calc_crv_example1.png" alt="" class="center img-margin" >
+            </div>
+
+
+        </li>
+        </ul>
+{% endblock %}
+
