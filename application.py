@@ -113,7 +113,7 @@ def calc_result():
 
     if s_t_w_d_i:
         win_per_stock = s_t_w_d_i - kurs_int
-        total_win = quantity * win_per_stock
+        total_win = round(quantity * win_per_stock)
 
     if crv_str:
         crv_float = float(crv_str)
