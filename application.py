@@ -17,6 +17,10 @@ def banking():
 def risk_calc():
     return render_template("calc_risk.html")
 
+@application.route('/calc_risk_briefing')
+def calc_risk_briefing():
+    return render_template("calc_risk_briefing.html")
+
 
 @application.route('/calc_result', methods=["POST", "GET"])
 def calc_result():
