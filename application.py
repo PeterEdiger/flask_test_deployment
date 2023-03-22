@@ -32,7 +32,7 @@ def calc_result():
     #
     quantity = request.args.get("quantity")
     if quantity:
-        quantity = int(quantity)
+        quantity = float(quantity)
     else:
         quantity = 1
     # --------------------------------------------------------------------------------#
@@ -42,7 +42,7 @@ def calc_result():
         # No price input case
         return render_template("calc_result.html", user_warning="Bitte Kurs eingeben")
     else:
-        kurs_int = int(kurs_str)
+        kurs_int = float(kurs_str)
     # -------------------------------Loss Fälle einlesen-------------------------------#
     selling_threshold_loss_dollar_str = request.args.get("selling_threshold_loss_dollar")
     loss_prct_str = request.args.get("loss_prct")
@@ -72,12 +72,12 @@ def calc_result():
 
     # nur Stop-Loss $
     if s_t_l_d_s:
-        s_t_l_d_i = int(s_t_l_d_s)
+        s_t_l_d_i = float(s_t_l_d_s)
         loss_prct_int = round((kurs_int - s_t_l_d_i) / kurs_int * 100)
 
     # nur Stop-Loss %
     if loss_prct_str:
-        loss_prct_int = int(loss_prct_str)
+        loss_prct_int = float(loss_prct_str)
         s_t_l_d_i = kurs_int * ((100 - loss_prct_int) / 100)
 
     # -------------------------Fall tolerated_loss no s_t_l_d_i-------------------------------------- #
@@ -85,19 +85,19 @@ def calc_result():
         return rt("calc_result.html", user_warning=" Bitte ein Verlust eintragen")
 
     if tolerated_loss_str:
-        tolerated_loss_int = int(tolerated_loss_str)
+        tolerated_loss_int = float(tolerated_loss_str)
         quantity = round(tolerated_loss_int / (kurs_int - s_t_l_d_i), 2)
     # --------------------------------------------------------------------------------#
     total_invest = kurs_int * quantity
 
     # nur Take-Profit $
     if s_t_w_d_s:
-        s_t_w_d_i = int(s_t_w_d_s)
+        s_t_w_d_i = float(s_t_w_d_s)
         win_prct_int = round((s_t_w_d_i - kurs_int) / kurs_int * 100)
 
     # nur Take-Profit %
     if win_prct_str:
-        win_prct_int = int(win_prct_str)
+        win_prct_int = float(win_prct_str)
         s_t_w_d_i = round(kurs_int * ((100 + win_prct_int) / 100))
 
     # Loss Angabe größer als Kurs
